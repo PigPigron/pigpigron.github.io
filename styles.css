@@ -56,6 +56,9 @@ body {
     text-decoration: none;
     font-weight: bold;
 }
+.navlist a:hover {
+    background: #FFFFFF;
+}
 .navlist img {
     width: 16px;
     height: 16px;
@@ -64,13 +67,13 @@ body {
 
 .darkDiv {
     background: #242124;
-    padding: 10px 20px 10px 20px;
+    padding: 20px;
 }
 
 .blueDiv {
     background:#202c41;
     background-size: 170px 170px;
-    padding: 10px 20px 10px 20px;
+    padding: 20px;
 }
 
 
@@ -109,7 +112,6 @@ div.gallery img {
 
 .underline {
     text-decoration: underline;
-    line-height: 16px;
 }
 h1 {
     line-height: 32px;
@@ -123,9 +125,6 @@ h3 {
 .list {
     line-height: 24px;
     padding: 10px;
-}
-.column .list {
-    text-align: left;
 }
 
 
