@@ -1,0 +1,118 @@
+html {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+body {
+    background: #242124;
+    color: #EEE;
+    margin: 0;
+    align-content: center;
+    text-align: center;
+    line-height: 12px;
+}
+
+.navbar {
+    overflow: hidden;
+    top: 0;
+    width: 100%;
+    padding: 10px 5px;
+    background: #27354f;
+    border: solid #061229;
+    border-width: 0 0 5px 0;
+    z-index: 1;
+}
+
+.navbar a {
+    margin: 2px;
+    display: inline-block;
+    color: black;
+    background: #C1C0EB;
+    padding: 14px 16px;
+    font-size: 18px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar img {
+    width: 16px;
+    height: 16px;
+}
+
+.navbar a:hover {
+    background: #FFFFFF;
+}
+
+.darkDiv {
+    background: #242124;
+    padding: 10px 20px 10px 20px;
+}
+
+.blueDiv {
+    background:#202c41;
+    background-size: 170px 170px;
+    padding: 10px 20px 10px 20px;
+}
+
+/* 3 Column Div Setup */
+.column {
+    float: left;
+    width: 50%;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Gallery Formatting*/
+gallery {
+    float: left;
+    width: 100%;
+}
+
+div.gallery img {
+    width: 120px;
+    border: 5px solid #C1C0EB;
+    margin: 5px;
+}
+
+.blur {
+    filter: blur(3px);
+}
+
+.underline {
+    text-decoration: underline;
+    line-height: 16px;
+}
+h1.underline {
+    line-height: 32px;
+}
+h2.underline {
+    line-height: 24px;
+}
+
+.list {
+    line-height: 24px;
+    padding: 10px;
+}
+.column .list {
+    text-align: left;
+}
+
+
+/* Changes for smaller screens */
+@media screen and (max-width: 600px) {
+    .navbar a {
+        width: 100%;
+    }
+    .column {
+        width: 100%;
+    }
+}
+@media screen and (min-width: 600px) {
+    .navbar {
+        position: sticky;
+    }
+}
