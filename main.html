@@ -7,17 +7,17 @@
         <link rel="stylesheet" href="styles.css" />
         <script src="script.js"></script>
     </head>
-    <body onload="loadMain(); scrollTo(0,0);">
+    <body onload="loadMain(); scrollTop(0);">
         <nav class="navbar">
             <a href="index.html">
                 <img src="site/icons/home-icon.png">
                 Home
             </a>
-            <a href="#" onclick="showAndHide('samples', 'tos')">
+            <a href="#" onclick="showSamples()">
                 <img src="site/icons/art-icon.png">
                 Prices and Samples
             </a>
-            <a href="#" onclick="showAndHide('tos', 'samples')">
+            <a href="#" onclick="showTos()">
                 <img src="site/icons/info-icon.png">
                 Terms of Service</a>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSeVN0ZHdZgOieaIlX6585wDkPIgKjRe_kux8BYAVNhktHuIpw/viewform" target="_blank">
@@ -237,7 +237,7 @@
             </div>
         </div> <!-- tos -->
         <div class="darkDiv">
-            <a class="top" href="#" onclick="scrollTo(0,0);">Back to top</a>
+            <a class="totop" href="#" onclick="scrollTo(0,0);">Back to top</a>
         </div>
         <iframe class="version" title="Website Version" src=version.html></iframe>
     </body>

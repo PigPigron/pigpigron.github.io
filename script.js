@@ -6,9 +6,11 @@ function showAndHide(toShow, toHide) {
 
 function showSamples() {
     showAndHide('samples', 'tos');
+    location.hash = '#samples';
 }
 function showTos() {
     showAndHide('tos', 'samples');
+    location.hash = '#tos';
 }
 
 function gotoSamples() { window.location.href = "main.html#samples"; }

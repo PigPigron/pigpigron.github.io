@@ -37,7 +37,9 @@ div.buttons a img, .navbar img{
 a.totop{
     width: calc(100% - 40px)
 }
-
+.navlist a{
+    width: 80%;
+}
 
 /* BASE CONTAINERS */
 .navbar {
@@ -74,7 +76,6 @@ a.totop{
     width: calc(100% / 3);
 }
 .row {
-    width: calc(100% - 40px);
     display: table;
 }
 
