@@ -23,5 +23,4 @@ function loadMain() {
     else {
         showTos();
     }
-    window.scrollTo(0,-200);
 }
