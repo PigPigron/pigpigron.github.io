@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>PigPigron's Art</title>
+        <link rel="icon" type="image/x-icon" href="site/icons/site-icon.png">
+        <link rel="stylesheet" href="styles.css" />
+        <script src="script.js"></script>
+    </head>
+    <body onload="loadMain(); scrollTo(0,0);">
+        <nav class="navbar">
+            <a href="index.html">
+                <img src="site/icons/home-icon.png">
+                Home
+            </a>
+            <a href="#" onclick="showAndHide('samples', 'tos')">
+                <img src="site/icons/art-icon.png">
+                Prices and Samples
+            </a>
+            <a href="#" onclick="showAndHide('tos', 'samples')">
+                <img src="site/icons/info-icon.png">
+                Terms of Service</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeVN0ZHdZgOieaIlX6585wDkPIgKjRe_kux8BYAVNhktHuIpw/viewform" target="_blank">
+                <img src="site/icons/envelope-icon.png">
+                Commission Form
+            </a>
+        </nav>
+        
+        <!-- SAMPLES --------------------------------------------------------------->
+        
+        <div id="samples" style="display: none;"> 
+            <div class="darkDiv"> <!-- VERSION CONTAINER -->
+                <h1 class="underline">Prices and Samples</h1>
+                <h3>Latest Prices (October 27, 2024)</h3>
+            </div>
+            
+            <div class="blueDiv"> <!-- ADDITIONAL INFORMATION CONTAINER -->
+                <h1 class="underline">Additional Commission Information</h1>
+                <h3 style="line-height: 16px;">+50% Price per additional character<br> 
+                    +50% Price for detailed backgrounds
+                </h3>
+            </div>
+            
+            <div class="darkDiv"> <!-- SKETCHES SAMPLES CONTAINER -->
+                <h1>Sketch</h1>
+                <h3>$30 Canadian</h3>
+                
+                <div class="row">
+                    <div class="column"> <!-- SKETCHES SFW -->
+                        <h3><u>SFW</u></h3>
+                        <div class="gallery">
+                            <img src="site/images/sketch/wendell.jpg" onclick="window.open(this.src, '_blank');">
+                            <img src="site/images/sketch/gator.jpg" onclick="window.open(this.src, '_blank');">
+                            <img src="site/images/sketch/piglinbrute.png" onclick="window.open(this.src, '_blank');">
+                            <img src="site/images/sketch/gnarpy.jpg" onclick="window.open(this.src, '_blank');">
+                            <img src="site/images/sketch/khat.jpg" onclick="window.open(this.src, '_blank');">
+                            <img src="site/images/sketch/volibear.jpg" onclick="window.open(this.src, '_blank');">
+                            <img src="site/images/sketch/racc.jpg" onclick="window.open(this.src, '_blank');">
+                        </div>
+                    </div>
+                    <div class="column"> <!-- SKETCHES NSFW -->
+                        <h3><u>NSFW</u></h3>
+                        <div class="gallery blur">
+                            <img src="site/images/sketch/nsfw/cuminf.jpg" onclick="window.open(this.src, '_blank');">
+                            <img src="site/images/sketch/nsfw/pig.jpg" onclick="window.open(this.src, '_blank');">
+                            <img src="site/images/sketch/nsfw/fullofpilk.jpg" onclick="window.open(this.src, '_blank');">
+                            <img src="site/images/sketch/nsfw/tummy.jpg" onclick="window.open(this.src, '_blank');">
+                            <img src="site/images/sketch/nsfw/vorewolf.jpg" onclick="window.open(this.src, '_blank');">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="blueDiv"> <!-- COLOURED SAMPLES CONTAINER -->
+                <h1>Coloured</h1>
+                <h3>$50 Canadian</h3>
+                
+                <div class="row">
+                    <div class="column"> <!-- COLOURED SFW -->
+                        <h3><u>SFW</u></h3>
+                        <div class="gallery">
+                            <img src="site/images/colour/pigog.jpg" onclick="window.open(this.src, '_blank');">
+                            <img src="site/images/colour/melontinypig.jpg" onclick="window.open(this.src, '_blank');">
+                            <img src="site/images/colour/melonpose.jpg" onclick="window.open(this.src, '_blank');">
+                            <img src="site/images/colour/melonsmile.png" onclick="window.open(this.src, '_blank');">
+                            <img src="site/images/colour/sirenround.png" onclick="window.open(this.src, '_blank');">
+                            <img src="site/images/colour/sirensolid.png" onclick="window.open(this.src, '_blank');">
+                            <img src="site/images/colour/bigfluffy.png" onclick="window.open(this.src, '_blank');">
+                            <img src="site/images/colour/bee.png" onclick="window.open(this.src, '_blank');">
+                            <img src="site/images/colour/fatwortox.jpg" onclick="window.open(this.src, '_blank');">
+                        </div>
+                    </div>
+                    <div class="column"> <!-- COLOURED NSFW -->
+                        <h3><u>NSFW</u></h3>
+                        <div class="gallery blur">
+                            <img src="site/images/colour/nsfw/bunny.jpg" onclick="window.open(this.src, '_blank');">
+                            <img src="site/images/colour/nsfw/preg.jpg" onclick="window.open(this.src, '_blank');">
+                            <img src="site/images/colour/nsfw/round.jpg" onclick="window.open(this.src, '_blank');">
+                            <img src="site/images/colour/nsfw/slap.jpg" onclick="window.open(this.src, '_blank');">
+                            <img src="site/images/colour/nsfw/trio.jpg" onclick="window.open(this.src, '_blank');">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="darkDiv"> <!-- SHADED SAMPLES CONTAINER -->
+                <h1>Shaded</h1>
+                <h3>$70 Canadian</h3>
+                
+                <div class="row">
+                    <div class="column"> <!-- SHADED SFW -->
+                        <h3><u>SFW</u></h3>
+                        <div class="gallery">
+                            <img src="site/images/shaded/fortnite.jpg" onclick="window.open(this.src, '_blank');">
+                            <img src="site/images/shaded/pig.jpg" onclick="window.open(this.src, '_blank');">
+                            <img src="site/images/shaded/ryu.jpg" onclick="window.open(this.src, '_blank');">
+                            <img src="site/images/shaded/zac.png" onclick="window.open(this.src, '_blank');">
+                            <img src="site/images/shaded/hyenamelon.jpg" onclick="window.open(this.src, '_blank');">
+                            <img src="site/images/shaded/melon.jpg" onclick="window.open(this.src, '_blank');">
+                            <img src="site/images/shaded/fatmelon.png" onclick="window.open(this.src, '_blank');">
+                            <img src="site/images/shaded/lunedog.jpg" onclick="window.open(this.src, '_blank');">
+                            <img src="site/images/shaded/chunky.png" onclick="window.open(this.src, '_blank');">
+                            
+                            
+                        </div>
+                    </div>
+                    <div class="column"> <!-- SHADED NSFW -->
+                        <h3><u>NSFW</u></h3>
+                        <div class="gallery blur">
+                            <img src="site/images/shaded/nsfw/tanuki.jpg" onclick="window.open(this.src, '_blank');">
+                            <img src="site/images/shaded/nsfw/bird.jpg" onclick="window.open(this.src, '_blank');">
+                            <img src="site/images/shaded/nsfw/vore.jpg" onclick="window.open(this.src, '_blank');">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="blueDiv">
+                <h1 class="underline">Reference Sheets</h1>
+                <h3>Ref sheets will always be flat coloured</h3>
+                <h3 style="line-height: 16px;">
+                    $60 CAD for Front<br>
+                    $90 CAD for Front and Back<br>
+                    +$30 CAD for Additional Poses
+                </h3>
+                <div class="gallery">
+                    <img src="site/images/ref/raccoonekto.jpg" onclick="window.open(this.src, '_blank');">
+                    <img src="site/images/ref/bullmelon.jpg" onclick="window.open(this.src, '_blank');">
+                    <img src="site/images/ref/hyenamelon.jpg" onclick="window.open(this.src, '_blank');">
+                    <img src="site/images/ref/koopamelon.jpg" onclick="window.open(this.src, '_blank');">
+                </div>
+            </div>
+        </div> <!-- samples -->
+        
+        
+        
+        <div id="tos" style="display: none;">
+            <div class="darkDiv">
+                <h1 class="underline">Terms of Service</h1>
+                <h2>Latest Version (September 28, 2024)</h2>
+                <h2 class="underline">Please read the terms and conditions carefully.</h2>
+            </div>
+            
+            <div class="blueDiv row">
+                <div class="column">
+                    <h2 class="underline">Service</h2>
+                    <div class="list">
+                        • You must be 18 years or older to commission me<br>
+                        • I retain the right to refuse a commission
+                    </div>
+                    <h2 class="underline">Usage of Commissions</h2>
+                    <div class="list">
+                        • Commissioned artwork can be freely used for personal use, if you post the artwork please credit me! :)<br>
+                        • Commissions are NOT to be used for commercial purposes by anyone, except me the artist.<br>
+                        • Once you receive the finished artwork, you are free to make edits to the artwork without having to ask for my permission. Do not remove any signatures or other crediting features if they are present!<br>
+                        • I am not responsible for any loss of artwork after the commission is done. You may ask if I have copies but I cannot guarantee I will.
+                    </div>
+                </div>
+                <div class="column">
+                    <h2 class="underline">Payment Conditions and Info</h2>
+                    <div class="list">
+                        • <span class="underline">Paypal</span> is the only payment processing service I use.<br>
+                        • By paying you agree to the terms of service and are legally responsible for the paying account.<br>
+                        • Payment must be made before I will begin the commission.<br>
+                        • When applying for a commission you can give your paypal info for invoicing.
+                    </div>
+                    <h2 class="underline">Refund and Chargeback Policies</h2>
+                    <div class="list">
+                        • Refunds will become unavailable after the commission process has begun.<br>
+                        • Chargebacks will result in you being banned from taking commissions from me. I will warn other artists if you make a chargeback.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="darkDiv">
+                <h1 class="underline">Guidelines</h1>
+                <div class="list">
+                    • Try to be precise with exactly what you want, including any desired changes.<br>
+                    • Before I continue onto the next stages of the commission, confirm that you don't want anymore changes! I can't go back to a previous stage if I'm on the next one!
+                </div>
+                
+                <div class="row">
+                    <div class="column3">
+                        <h2 class="underline">For Sure!</h2>
+                        <div class="list">
+                            • Furry Characters<br>
+                            • Human Characters<br>
+                            • NSFW<br>
+                            • Most consensual kinks
+                        </div>
+                    </div>
+                    <div class="column3">
+                        <h2 class="underline">I will NOT draw this!</h2>
+                        <div class="list">
+                            • Underage/Cub characters<br>
+                            • Non consensual/Emotionally damaging scenarios or kinks<br>
+                            • Extremely unsanitary fetishes, mainly scat or urine<br>
+                            • gore/deep wounds<br>
+                            • Hard vore<br>
+                            • Offensive/Racist language or content
+                        </div>
+                    </div>
+                    <div class="column3">
+                        <h2 class="underline">I might draw these!</h2>
+                        <h4>(You would be served better going to someone more specialized in these!)</h4>
+                            • Female Characters (SFW if I do)
+                    </div>
+                </div>
+            </div>
+            
+            <div class="blueDiv">
+                <h1 class="underline">Term Changes</h1>
+                <div class="list">
+                    • Terms are subject to change at anytime without notice.<br>
+                    • An in progress commission is only subject to the term version it was accepted on. So you don't have to worry about terms changing in the middle of a commission.
+                </div>
+            </div>
+        </div> <!-- tos -->
+        <div class="darkDiv">
+            <a class="top" href="#" onclick="scrollTo(0,0);">Back to top</a>
+        </div>
+        <iframe class="version" title="Website Version" src=version.html></iframe>
+    </body>
+</html>
