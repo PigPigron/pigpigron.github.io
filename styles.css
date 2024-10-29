@@ -6,15 +6,43 @@ body {
     background: #242124;
     color: #EEE;
     margin: 0;
+    padding: 0;
     align-content: center;
     text-align: center;
     line-height: 12px;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 
+/* BUTTON RELATED */
+div.buttons a, a.totop, .navbar a {
+    margin: 2px;
+    display: inline-block;
+    color: black;
+    background: #C1C0EB;
+    padding: 14px 16px;
+    font-size: 18px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    line-height: 16px;
+}
+div.buttons a:hover, a.totop:hover, .navbar a:hover {
+    background: #FFFFFF;
+}
+div.buttons a img, .navbar img{
+    max-width: 16px;
+}
+a.totop{
+    width: calc(100% - 40px)
+}
 
+
+/* BASE CONTAINERS */
 .navbar {
     overflow: hidden;
+    position: sticky;
     top: 0;
     width: 100%;
     padding: 10px 5px;
@@ -23,53 +51,10 @@ body {
     border-width: 0 0 5px 0;
     z-index: 1;
 }
-
-.navbar a {
-    margin: 2px;
-    display: inline-block;
-    color: black;
-    background: #C1C0EB;
-    padding: 14px 16px;
-    font-size: 18px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: bold;
-}
-.navbar img {
-    width: 16px;
-    height: 16px;
-}
-.navbar a:hover {
-    background: #FFFFFF;
-}
-
-.navlist a{
-    height: auto;
-    width: 80%;
-    margin: 2px;
-    display: inline-block;
-    color: black;
-    background: #C1C0EB;
-    padding: 14px 16px;
-    font-size: 18px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: bold;
-}
-.navlist a:hover {
-    background: #FFFFFF;
-}
-.navlist img {
-    width: 16px;
-    height: 16px;
-}
-
-
 .darkDiv {
     background: #242124;
     padding: 20px;
 }
-
 .blueDiv {
     background:#202c41;
     background-size: 170px 170px;
@@ -79,20 +64,18 @@ body {
 
 
 /* 3 Column Div Setup */
-.column {
+.column, .column3{
     width: 50%;
     display: table-cell;
     vertical-align: middle;
-    
-}
-.row {
-    width: 100%;
-    display: table;
+    padding: 5px;
 }
 .column3 {
-    width: 33%;
-    display: table-cell;
-    vertical-align: middle;
+    width: calc(100% / 3);
+}
+.row {
+    width: calc(100% - 40px);
+    display: table;
 }
 
 
@@ -105,6 +88,7 @@ gallery {
 }
 div.gallery img {
     width: auto;
+    max-width: 100%;
     max-height: 120px;
     border: 5px solid #C1C0EB;
     margin: 5px;
@@ -121,18 +105,15 @@ div.gallery img {
 h1 {
     line-height: 32px;
 }
-h2 {
+h2, .list {
     line-height: 24px;
 }
 h3 {
     line-height: 16px;
 }
-.list {
-    line-height: 24px;
-    padding: 10px;
-}
 
 
+/* HOME PAGE CONTAINERS */
 div.home {
     position: absolute;
     top: 20%;
@@ -167,17 +148,21 @@ div.home .bottom {
 .links img:hover {
     filter:brightness(200%);
 }
-/* Changes for smaller screens */
-@media screen and (max-width: 600px) {
-    .navbar a {
-        width: 100%;
-    }
-    .column {
-        width: 100%;
-    }
+
+iframe.version {
+    border: none;
+    width: 100%;
 }
-@media screen and (min-width: 600px) {
+/* Changes for smaller screens */
+@media screen and (max-width: 700px) {
     .navbar {
-        position: sticky;
+        position: relative;
+    }
+    .navbar a {
+        width: 80%;
+    }
+    .column, .column3 {
+        width: 100%;
+        display: inline-block;
     }
 }
