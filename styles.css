@@ -89,6 +89,11 @@ body {
     width: 100%;
     display: table;
 }
+.column3 {
+    width: 33%;
+    display: table-cell;
+    vertical-align: middle;
+}
 
 
 
