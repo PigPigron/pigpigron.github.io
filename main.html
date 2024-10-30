@@ -8,7 +8,9 @@
         <script src="script.js"></script>
     </head>
     <body onload="loadMain(); const myTimeout = setTimeout(window.scrollTo(0,-200), 100);">
-        <nav class="navbar">
+        
+        <!-- NAVBAR CONTAINER -->
+        <nav class="navbar buttons">
             <a href="index.html">
                 <img src="site/icons/home-icon.png">
                 Home
@@ -32,6 +34,32 @@
             <div class="darkDiv"> <!-- VERSION CONTAINER -->
                 <h1 class="underline">Prices and Samples</h1>
                 <h3>Latest Prices (October 27, 2024)</h3>
+            </div>
+            
+            <div class="blueDiv">
+                <h1>Calculator</h1>
+            </div>
+            
+            <div class="darkDiv">
+                <div class="row calculator" style="width: 100%;">
+                    <div class="column3">
+                        <h3>Commission Type</h3>
+                        <input type="checkbox" id="sketchCheck" onclick="checkSketch()">Sketch<br>
+                        <input type="checkbox" id="colourCheck" onclick="checkColour()">Coloured<br>
+                        <input type="checkbox" id="shadeCheck" onclick="checkShaded()">Shaded
+                    </div>
+                    <div class="column3">
+                        <h3>Character Amount</h3>
+                        <input type="number" min="1" max="10" id="characterAmt" name="CharacterAmt">
+                    </div>
+                    <div class="column3">
+                        <h3>Detailed Background</h3>
+                        <input type="checkbox" id="backgroundCheck">
+                    </div>
+                </div>
+                <hr style="border:dashed #C1C0EB; width: 100%;">
+                <button class = "button" id="calcButton" onclick="calculatePrice()">Calculate</button>
+                <h3 id="calculatedPrice">Total Cost: $0</h3>
             </div>
             
             <div class="blueDiv"> <!-- ADDITIONAL INFORMATION CONTAINER -->
@@ -237,7 +265,7 @@
             </div>
         </div> <!-- tos -->
         <div class="darkDiv">
-            <a class="totop" href="#" onclick="scrollTo(0,-200);">Back to top</a>
+            <a class="button totop" href="#" onclick="scrollTo(0,-200);">Back to top</a>
         </div>
         <iframe class="version" title="Website Version" src=version.html></iframe>
     </body>
