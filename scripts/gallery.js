@@ -4,13 +4,13 @@ function $(id) { return document.getElementById(id); }
 
 function loadSamples() {
     if (window.location.hash === '#sketch') {
-        setSketches(true);
+        filterSketch();
     } else if (window.location.hash === '#colour'){
-        setColours(true);
+        filterColour();
     } else if (window.location.hash === '#shade'){
-        setShades(true);
+        filterShade();
     }else if (window.location.hash === '#ref'){
-        setRefs(true);
+        filterRef();
     } else {
         setAll(true);
     }
