@@ -1,0 +1,108 @@
+.bar {
+    background-color: #202c41;
+    display: flex;
+}
+.bar.top {
+    border-bottom: solid 5px #C1C0EB;
+}
+.bar.bot {
+    border-top: solid 5px #C1C0EB;
+}
+
+.left {
+    text-align: left;
+    align-content: center;
+}
+.right {
+    text-align: right;
+    align-content: center;
+    
+}
+
+.home {
+    display: inline-block;
+}
+.home img{
+    max-width: 75px;
+    height: auto;
+    vertical-align: middle;
+    scale: .95;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.home img:hover {
+    scale: 1;
+}
+.home div {
+    cursor: pointer;
+    text-decoration: underline 2px rgba(255,255,255,0);
+    transition: 0.3s;
+}
+.home div:hover {
+    text-decoration-color: rgba(255,255,255,1)
+}
+
+.name {
+    display: inline;
+    font-size: x-large;
+    font-weight: bolder;
+}
+.name.orange {
+    color: #C3703A;
+}
+.name.tan {
+    color: #CCA975;
+}
+
+.link {
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    transition: 0.3s;
+}
+.bluesky {
+    background: url(/images/icon/bluesky-icon.png) no-repeat center;
+    background-size: contain;
+    
+}
+.bluesky:hover {
+    background: url(/images/icon/bluesky-icon-hover.png) no-repeat center;
+    background-size: contain;
+}
+.twitter {
+    background: url(/images/icon/twitter-icon.png) no-repeat center;
+    background-size: contain;
+    
+}
+.twitter:hover {
+    background: url(/images/icon/twitter-icon-hover.png) no-repeat center;
+    background-size: contain;
+}
+.fa {
+    background: url(/images/icon/fa-icon.png) no-repeat center;
+    background-size: contain;
+    
+}
+.fa:hover {
+    background: url(/images/icon/fa-icon-hover.png) no-repeat center;
+    background-size: contain;
+}
+.kofi {
+    background: url(/images/icon/kofi-icon.png) no-repeat center;
+    background-size: contain;
+    
+}
+.kofi:hover {
+    background: url(/images/icon/kofi-icon-hover.png) no-repeat center;
+    background-size: contain;
+}
+
+@media screen and (max-width: 700px) {
+    .bar {
+        display: block;
+    }
+    .box50, .box33, .box17 {
+        width: inherit;
+        text-align: center;
+    }
+}

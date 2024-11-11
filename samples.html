@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Pig's Art | Samples</title>
+        <link rel="icon" type="image/x-icon" href="site/icons/site-icon.png">
+        <link rel="stylesheet" href="styles/main.css"/>
+        <link rel="stylesheet" href="styles/bars.css"/>
+        <link rel="stylesheet" href="styles/buttons.css"/>
+        <link rel="stylesheet" href="styles/gallery.css"/>
+        <script src="scripts/script.js"></script>
+        <script src="scripts/gallery.js"></script>
+    </head>
+    <body onload="loadSamples()">
+        
+        <!-- NAV BAR ---------------------------------------------->
+        <header class="bar top">
+            
+            <div class="left home box33">
+                <img src="images/icon/site-icon.png" onclick="window.open('index.html', '_self')">
+                <div class="name orange" onclick="window.open('index.html', '_self')">Pig</div>
+                <div class="name tan" onclick="window.open('index.html', '_self')">Pigron</div>
+            </div>
+            <nav class="right buttons box50">
+                <a href="samples.html"><img src="images/icon/art-icon.png">Samples</a>
+                <a href="prices.html"><img src="images/icon/dollar-icon.png">Prices</a>
+                <a href="tos.html"><img src="images/icon/info-icon.png">Info</a>
+            </nav>
+            <nav class="right buttons box17">
+                <a class="form" href="https://docs.google.com/forms/d/e/1FAIpQLSeVN0ZHdZgOieaIlX6585wDkPIgKjRe_kux8BYAVNhktHuIpw/viewform"><img src="images/icon/envelope-icon.png">Apply Now</a>
+            </nav>
+            
+        </header>
+        
+        <div id="scrollButton" onclick="window.scrollTo(0,0)">^</div>
+        
+        <!-- TITLE ---------------------------------------------->
+        <div class="colour darkd">
+            <h1><img src="images/icon/art-icon.png" class="titleicon"><br>Gallery</h1>
+        </div>
+        
+        <!-- FILTER OPTIONS ---------------------------------------------->
+        <div class="colour blued buttons">
+            <h3 style="display: inline;">Filters:</h3>
+            <a onclick="setAll(true);">All</a>
+            <a onclick="filterSketch();">Sketch</a>
+            <a onclick="filterColour();">Coloured</a>
+            <a onclick="filterShade();">Shaded</a>
+            <a onclick="filterRef();">Ref Sheets</a>
+            <a onclick="filterSticker()">Stickers</a>
+        </div>
+        <div class="colour blued">
+            <h3 style="display: inline">NSFW:</h3>
+            <a class="button" id="nsfwToggle" onclick="toggleNSFW();">✖</a>
+        </div>
+        
+        <!-- SKETCHES ---------------------------------------------->
+        <section id="sketches" style="display: none;">
+            <div class="colour darkd">
+                <h3>Sketches</h3>
+                <div class="gallery">
+                    <img src="images/art/sketch/gator-1000.jpg">
+                    <img src="images/art/sketch/gnarpy-1000.jpg">
+                    <img src="images/art/sketch/khat-1000.jpg">
+                    <img src="images/art/sketch/piglinbrute-1000.png">
+                    <img src="images/art/sketch/racc-1000.jpg">
+                    <img src="images/art/sketch/volibear-1000.jpg">
+                    <img src="images/art/sketch/wendell-1000.jpg">
+                </div>
+            </div>
+            <br>
+            <div class="colour blued" id="nSketches">
+                <h3>NSFW Sketches</h3>
+                <div class="gallery nsfw">
+                    <img src="images/art/sketch/nsfw/cuminf-1000.jpg">
+                    <img src="images/art/sketch/nsfw/fullofpilk-1000.jpg">
+                    <img src="images/art/sketch/nsfw/pig-1000.jpg">
+                    <img src="images/art/sketch/nsfw/tummy-1000.jpg">
+                    <img src="images/art/sketch/nsfw/vorewolf-1000.jpg">
+                </div>
+            </div>
+        </section>
+        
+        <!-- COLOURED ---------------------------------------------->
+        <section id="coloured" style="display: none;">
+            <div class="colour darkd">
+                <h3>Coloured</h3>
+                <div class="gallery">
+                    <img src="images/art/colour/bee-1000.png">
+                    <img src="images/art/colour/bigfluffy-1000.png">
+                    <img src="images/art/colour/fatwortox-1000.jpg">
+                    <img src="images/art/colour/melonpose-1000.jpg">
+                    <img src="images/art/colour/melonsmile-1000.png">
+                    <img src="images/art/colour/melontinypig-800.jpg">
+                    <img src="images/art/colour/pigog-1000.jpg">
+                    <img src="images/art/colour/sirenround-1000.png">
+                    <img src="images/art/colour/sirensolid-1000.png">
+                </div>
+            </div>
+            <br>
+            <div class="colour blued" id="nColoured">
+                <h3>NSFW Coloured</h3>
+                <div class="gallery nsfw">
+                    <img src="images/art/colour/nsfw/bunny-1000.jpg">
+                    <img src="images/art/colour/nsfw/preg-1000.jpg">
+                    <img src="images/art/colour/nsfw/round-1000.jpg">
+                    <img src="images/art/colour/nsfw/slap-1000.jpg">
+                    <img src="images/art/colour/nsfw/trio-1000.jpg">
+                </div>
+            </div>
+        </section>
+        
+        <!-- SHADED ---------------------------------------------->
+        <section id="shaded" style="display: none;">
+            <div class="colour darkd">
+                <h3>Shaded</h3>
+                <div class="gallery">
+                    <img src="images/art/shaded/chunky-1000.png">
+                    <img src="images/art/shaded/fatmelon-1000.png">
+                    <img src="images/art/shaded/fortnite-1000.jpg">
+                    <img src="images/art/shaded/lunedog-1000.jpg">
+                    <img src="images/art/shaded/melon-1000.jpg">
+                    <img src="images/art/shaded/pig-1000.jpg">
+                    <img src="images/art/shaded/ryu-1000.jpg">
+                    <img src="images/art/shaded/zac-1000.png">
+                </div>
+            </div>
+            <br>
+            <div class="colour blued" id="nShaded">
+                <h3>NSFW Shaded</h3>
+                <div class="gallery nsfw">
+                    <img src="images/art/shaded/nsfw/bird-1000.jpg">
+                    <img src="images/art/shaded/nsfw/tanuki-1000.jpg">
+                    <img src="images/art/shaded/nsfw/vore-1000.jpg">
+                </div>
+            </div>
+        </section>
+        
+        <!-- REF SHEETS ---------------------------------------------->
+        <section id="refs" style="display: none;">
+            <div class="colour darkd">
+                <h3>Reference Sheets</h3>
+                <div class="gallery">
+                    <img src="images/art/ref/bullmelon-1000.jpg">
+                    <img src="images/art/ref/raccoonekto-1000.jpg">
+                    <img src="images/art/ref/hyenamelon-1000.jpg">
+                    <img src="images/art/ref/koopamelon-1000.jpg">
+                </div>
+            </div>
+            <br>
+        </section>
+        
+        <!-- STICKERS ---------------------------------------------->
+        <section id="stickers" style="display: block;">
+            <div class="colour darkd">
+                <h3>Stickers</h3>
+                <div class="gallery">
+                    <img src="images/icon/site-icon.png">
+                </div>
+            </div>
+            <br>
+        </section>
+        
+        <!-- BOTTOM BAR ---------------------------------------------->
+        <footer class="bar bot">
+            
+            <div class="left box50">
+                <div class="links">
+                    <div class="link bluesky" onclick="window.open('https://bsky.app/profile/pigpigron.bsky.social')"></div>
+                    <div class="link twitter" onclick="window.open('https://twitter.com/pigpigron')"></div>
+                    <div class="link fa" onclick="window.open('https://www.furaffinity.net/user/pigpigron')"></div>
+                    <div class="link kofi" onclick="window.open('https://ko-fi.com/pigpigron')"></div>
+                </div>
+                <h3>© PigPigron Art | Website made by me!</h3>
+            </div>
+            <div class="right home box50">
+                <div class="name orange" onclick="window.open('index.html', '_self')">Pig</div>
+                <div class="name tan" onclick="window.open('index.html', '_self')">Pigron</div>
+                <img src="images/icon/site-icon.png" onclick="window.open('index.html', '_self')">
+            </div>
+            
+        </footer>
+        
+    </body>
+</html>

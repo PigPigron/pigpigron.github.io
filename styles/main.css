@@ -1,0 +1,118 @@
+html {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+body {
+    background: #202c41;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    color: #FFF;
+    text-align: center;
+}
+
+.box50 {
+    width: 50%;
+    margin: 10px;
+}
+.box33 {
+    width: 33%;
+    margin: 10px;
+}
+.box17 {
+    width: 17%;
+    margin: 10px;
+}
+
+.colour {
+    padding: 1%;
+}
+.colour.blued {
+    background-color: #202c41;
+}
+.colour.darkd {
+    background-color: #242124;
+}
+
+.row3 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.row2 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    
+}
+.row3 div {
+    width: 31%;
+    margin: 1%;
+}
+.row2 div {
+    width: 48%;
+    margin: 1%;
+}
+
+.pricebox {
+    background: #C1C0EB;
+    border-radius: 20px;
+    font-weight: bold;
+    color: #000;
+    align-content: center;
+}
+.pricebox h3{
+    padding: 10px;
+}
+.pricebox a {
+    margin: 10px;
+}
+.pricesample img {
+    max-width: 100%;
+    scale: 0.95;
+    transition: 0.3s;
+}
+.pricesample img:hover {
+    scale: 1;
+}
+
+img.titleicon {
+    max-width: 60px;
+    filter: invert(80%) sepia(52%)
+            saturate(491%) hue-rotate(191deg)
+            brightness(93%) contrast(97%);
+}
+
+#scrollButton {
+    position: fixed;
+    z-index: 1;
+    bottom: 10%;
+    right: 5%;
+    width: 60px;
+    height: 60px;
+    background-color: #C1C0EB;
+    border-radius: 50px;
+    border: solid 5px #000;
+    color: black;
+    line-height: 75px;
+    font-size: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    opacity: 0;
+    user-select: none;
+}
+#scrollButton:hover {
+    background-color: white;
+}
+
+@media screen and (max-width: 700px) {
+    .row2, .row3 {
+        display: block;
+    }
+    .row2 div, .row3 div {
+        width: 98%;
+    }
+    .rightleft {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}

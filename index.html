@@ -2,66 +2,40 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <title>PigPigron's Art</title>
+        <title>Pig's Art | Home</title>
         <link rel="icon" type="image/x-icon" href="site/icons/site-icon.png">
-        <link rel="stylesheet" href="styles.css" />
-        <script src="script.js"></script>
+        <link rel="stylesheet" href="styles/main.css"/>
+        <link rel="stylesheet" href="styles/buttons.css"/>
+        <link rel="stylesheet" href="styles/home.css"/>
+        <link rel="stylesheet" href="styles/bars.css"/>
+        <script src="scripts/script.js"></script>
     </head>
     
     <body>
-        <div class="home">
-            <div class="top">
-                <h1 class="underline">Pig Pigron's Art Website</h1>
+        <img class="backart" src="images/art/home/back.png">
+        
+        <header>
+            <div class="links">
+                <div class="link bluesky" onclick="window.open('https://bsky.app/profile/pigpigron.bsky.social')"></div>
+                <div class="link twitter" onclick="window.open('https://twitter.com/pigpigron')"></div>
+                <div class="link fa" onclick="window.open('https://www.furaffinity.net/user/pigpigron')"></div>
+                <div class="link kofi" onclick="window.open('https://ko-fi.com/pigpigron')"></div>
             </div>
-            
-            <div class="middle">
-                <h1>My commissions are currently: <u>OPEN!</u></h1>
+        </header>
+        <section class="row2">
+            <div>
+                <nav>
+                    <a href="samples.html"><img src="images/icon/art-icon.png">Samples</a>
+                    <a href="prices.html"><img src="images/icon/dollar-icon.png">Prices</a>
+                    <a href="tos.html"><img src="images/icon/info-icon.png">Info</a>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeVN0ZHdZgOieaIlX6585wDkPIgKjRe_kux8BYAVNhktHuIpw/viewform"><img src="images/icon/envelope-icon.png">Apply Now</a>
+                </nav>
             </div>
-            
-            <div class="bottom">
-                <div class="row">
-                    <div class="column">
-                        <h3><u>Navigation</u></h3>
-                        <div class="buttons navlist">
-                            <a href="#" onclick="gotoSamples()">
-                                <img src="site/icons/art-icon.png">
-                                Prices and Samples
-                            </a>
-                            <a href="#" onclick="gotoTos()">
-                                <img src="site/icons/info-icon.png">
-                                Terms of Service</a>
-                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeVN0ZHdZgOieaIlX6585wDkPIgKjRe_kux8BYAVNhktHuIpw/viewform" target="_blank">
-                                <img src="site/icons/envelope-icon.png">
-                                Commission Form
-                            </a>
-                        </div>
-                        <hr style="border:dashed #C1C0EB; width: 80%;">
-                        
-                        <h3><u>Socials</u></h3>
-                        <div class="links">
-                            <img src="site/icons/twitter-color-icon.png" onclick="window.open('https://x.com/pigpigron', '_blank');">
-                            <img src="site/icons/bluesky-icon.png" onclick="window.open('https://bsky.app/profile/pigpigron.bsky.social', '_blank');">
-                            <img src="site/icons/fa-icon.png" onclick="window.open('https://www.furaffinity.net/user/pigpigron', '_blank');">
-                            <img src="site/icons/ko-fi-icon.png" onclick="window.open('https://ko-fi.com/pigpigron', '_blank');">
-                        </div>
-                        
-                    </div>
-                    
-                    <div class="column">
-                        <div class="gallery">
-                            <img src="site/images/home/pfp.png">
-                            <img src="site/images/home/mooman.jpg">
-                        </div>
-                        <h4>This is me and my moo man! ^^^</h4>
-                        <hr style="border:dashed #C1C0EB; width: 80%;">
-                        <h1><u>About Me!</u></h1>
-                        <h3>Hi! My name is Pig! I'm a gay furry artist who likes to draw men :D I also draw lots of tummies. I'm going to university to become a software developer. My goal is to one day work in the video game industry as either a developer or programmer! I hope to even make my own games one day.</h3>
-                    </div>
-                </div>
-            </div>
-            
-            <iframe class="version" title="Website Version" src=version.html></iframe>
-            
-        </div>
+        </section>
+        
+        <footer>
+            © PigPigron Art<br>
+            WEBSITE VERSION ( November 10, 2024)
+        </footer>
     </body>
 </html>
