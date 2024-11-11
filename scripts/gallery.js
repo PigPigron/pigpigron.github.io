@@ -53,6 +53,22 @@ function setter(el, state) {
     }
 }
 
+function toggleViewer() {
+    var viewer = $('imageviewer');
+    
+    if (viewer.style.display == 'none') {
+        viewer.style.display = 'block';
+    } else {
+        viewer.style.display = 'none';
+    }
+}
+
+function viewSelectedImage(source) {
+    toggleViewer();
+    var preview = $('viewedimage');
+    preview.src = source;
+}
+
 function filterSketch() {
     setSketches(true);
     setColours(false);

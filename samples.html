@@ -14,6 +14,12 @@
     </head>
     <body onload="loadSamples()">
         
+        <!-- PHOTO VIEWER ---------------------------------------------->
+        <div id="imageviewer">
+            <div id="exitviewer" onclick="toggleViewer()">X</div>
+            <img src="images/art/sketch/gnarpy-1000.jpg" id="viewedimage">
+        </div>
+        
         <!-- NAV BAR ---------------------------------------------->
         <header class="bar top">
             
@@ -36,12 +42,12 @@
         <div id="scrollButton" onclick="window.scrollTo(0,0)">^</div>
         
         <!-- TITLE ---------------------------------------------->
-        <div class="colour darkd">
+        <section class="colour darkd">
             <h1><img src="images/icon/art-icon.png" class="titleicon"><br>Gallery</h1>
-        </div>
+        </section>
         
         <!-- FILTER OPTIONS ---------------------------------------------->
-        <div class="colour blued buttons">
+        <section class="colour blued buttons">
             <h3 style="display: inline;">Filters:</h3>
             <a onclick="setAll(true);">All</a>
             <a onclick="filterSketch();">Sketch</a>
@@ -49,35 +55,65 @@
             <a onclick="filterShade();">Shaded</a>
             <a onclick="filterRef();">Ref Sheets</a>
             <a onclick="filterSticker()">Stickers</a>
-        </div>
-        <div class="colour blued">
+        </section>
+        
+        <section class="colour blued">
             <h3 style="display: inline">NSFW:</h3>
             <a class="button" id="nsfwToggle" onclick="toggleNSFW();">✖</a>
-        </div>
+        </section>
         
         <!-- SKETCHES ---------------------------------------------->
         <section id="sketches" style="display: none;">
             <div class="colour darkd">
                 <h3>Sketches</h3>
                 <div class="gallery">
-                    <img src="images/art/sketch/gator-1000.jpg">
-                    <img src="images/art/sketch/gnarpy-1000.jpg">
-                    <img src="images/art/sketch/khat-1000.jpg">
-                    <img src="images/art/sketch/piglinbrute-1000.png">
-                    <img src="images/art/sketch/racc-1000.jpg">
-                    <img src="images/art/sketch/volibear-1000.jpg">
-                    <img src="images/art/sketch/wendell-1000.jpg">
+                    <img src="images/art/sketch/gator-1000.jpg" 
+                         onclick="viewSelectedImage('../images/art/sketch/gator.jpg')">
+                    
+                    <img src="images/art/sketch/gnarpy-1000.jpg" 
+                         onclick="viewSelectedImage('../images/art/sketch/gnarpy.jpg')">
+                    
+                    <img src="images/art/sketch/khat-1000.jpg" 
+                         onclick="viewSelectedImage('../images/art/sketch/khat.jpg')">
+                    
+                    <img src="images/art/sketch/piglinbrute-1000.png" 
+                         onclick="viewSelectedImage('../images/art/sketch/piglinbrute.png')">
+                    
+                    <img src="images/art/sketch/racc-1000.jpg" 
+                         onclick="viewSelectedImage('../images/art/sketch/racc.jpg')">
+                    
+                    <img src="images/art/sketch/volibear-1000.jpg" 
+                         onclick="viewSelectedImage('../images/art/sketch/volibear.jpg')">
+                    
+                    <img src="images/art/sketch/wendell-1000.jpg" 
+                         onclick="viewSelectedImage('../images/art/sketch/wendell.jpg')">
+                    <img src="images/art/sketch/moose-1000.png" 
+                         onclick="viewSelectedImage('../images/art/sketch/moose.png')">
+                    
                 </div>
             </div>
             <br>
             <div class="colour blued" id="nSketches">
                 <h3>NSFW Sketches</h3>
                 <div class="gallery nsfw">
-                    <img src="images/art/sketch/nsfw/cuminf-1000.jpg">
-                    <img src="images/art/sketch/nsfw/fullofpilk-1000.jpg">
-                    <img src="images/art/sketch/nsfw/pig-1000.jpg">
-                    <img src="images/art/sketch/nsfw/tummy-1000.jpg">
-                    <img src="images/art/sketch/nsfw/vorewolf-1000.jpg">
+                    <img src="images/art/sketch/nsfw/cuminf-1000.jpg" 
+                         onclick="viewSelectedImage('../images/art/sketch/nsfw/cuminf.jpg')">
+                    
+                    <img src="images/art/sketch/nsfw/fullofpilk-1000.jpg" 
+                         onclick="viewSelectedImage('../images/art/sketch/nsfw/fullofpilk.jpg')">
+                    
+                    <img src="images/art/sketch/nsfw/pig-1000.jpg" 
+                         onclick="viewSelectedImage('../images/art/sketch/nsfw/pig.jpg')">
+                    
+                    <img src="images/art/sketch/nsfw/tummy-1000.jpg" 
+                         onclick="viewSelectedImage('../images/art/sketch/nsfw/tummy.jpg')">
+                    
+                    <img src="images/art/sketch/nsfw/vorewolf-1000.jpg" 
+                         onclick="viewSelectedImage('../images/art/sketch/nsfw/vorewolf.jpg')">
+                    
+                    <img src="images/art/sketch/nsfw/melonveryfat-1000.png" 
+                         onclick="viewSelectedImage('../images/art/sketch/nsfw/melonveryfat.png')">
+                    
                 </div>
             </div>
         </section>
@@ -87,26 +123,56 @@
             <div class="colour darkd">
                 <h3>Coloured</h3>
                 <div class="gallery">
-                    <img src="images/art/colour/bee-1000.png">
-                    <img src="images/art/colour/bigfluffy-1000.png">
-                    <img src="images/art/colour/fatwortox-1000.jpg">
-                    <img src="images/art/colour/melonpose-1000.jpg">
-                    <img src="images/art/colour/melonsmile-1000.png">
-                    <img src="images/art/colour/melontinypig-800.jpg">
-                    <img src="images/art/colour/pigog-1000.jpg">
-                    <img src="images/art/colour/sirenround-1000.png">
-                    <img src="images/art/colour/sirensolid-1000.png">
+                    <img src="images/art/colour/bee-1000.png" 
+                         onclick="viewSelectedImage('../images/art/colour/bee.png')">
+                    
+                    <img src="images/art/colour/bigfluffy-1000.png" 
+                         onclick="viewSelectedImage('../images/art/colour/bigfluffy.png')">
+                    
+                    <img src="images/art/colour/fatwortox-1000.jpg" 
+                         onclick="viewSelectedImage('../images/art/colour/fatwortox.jpg')">
+                    
+                    <img src="images/art/colour/melonpose-1000.jpg"
+                         onclick="viewSelectedImage('../images/art/colour/melonpose.jpg')">
+                    
+                    <img src="images/art/colour/melonsmile-1000.png"
+                         onclick="viewSelectedImage('../images/art/colour/melonsmile.png')">
+                    
+                    <img src="images/art/colour/melontinypig-800.jpg"
+                         onclick="viewSelectedImage('../images/art/colour/melontinypig.jpg')">
+                    
+                    <img src="images/art/colour/pigog-1000.jpg"
+                         onclick="viewSelectedImage('../images/art/colour/pigog.jpg')">
+                    
+                    <img src="images/art/colour/sirenround-1000.png"
+                         onclick="viewSelectedImage('../images/art/colour/sirenround.png')">
+                    
+                    <img src="images/art/colour/sirensolid-1000.png"
+                         onclick="viewSelectedImage('../images/art/colour/sirensolid.png')">
                 </div>
             </div>
             <br>
             <div class="colour blued" id="nColoured">
                 <h3>NSFW Coloured</h3>
                 <div class="gallery nsfw">
-                    <img src="images/art/colour/nsfw/bunny-1000.jpg">
-                    <img src="images/art/colour/nsfw/preg-1000.jpg">
-                    <img src="images/art/colour/nsfw/round-1000.jpg">
-                    <img src="images/art/colour/nsfw/slap-1000.jpg">
-                    <img src="images/art/colour/nsfw/trio-1000.jpg">
+                    <img src="images/art/colour/nsfw/bunny-1000.jpg"
+                         onclick="viewSelectedImage('../images/art/colour/nsfw/bunny.jpg')">
+                    
+                    <img src="images/art/colour/nsfw/preg-1000.jpg"
+                         onclick="viewSelectedImage('../images/art/colour/nsfw/preg.jpg')">
+                    
+                    <img src="images/art/colour/nsfw/round-1000.jpg"
+                         onclick="viewSelectedImage('../images/art/colour/nsfw/round.jpg')">
+                    
+                    <img src="images/art/colour/nsfw/slap-1000.jpg"
+                         onclick="viewSelectedImage('../images/art/colour/nsfw/slap.jpg')">
+                    
+                    <img src="images/art/colour/nsfw/trio-1000.jpg"
+                         onclick="viewSelectedImage('../images/art/colour/nsfw/trio.jpg')">
+                    
+                    <img src="images/art/colour/nsfw/charrfat-1000.png"
+                         onclick="viewSelectedImage('../images/art/colour/nsfw/charrfat.png')">
+                    
                 </div>
             </div>
         </section>
@@ -116,23 +182,45 @@
             <div class="colour darkd">
                 <h3>Shaded</h3>
                 <div class="gallery">
-                    <img src="images/art/shaded/chunky-1000.png">
-                    <img src="images/art/shaded/fatmelon-1000.png">
-                    <img src="images/art/shaded/fortnite-1000.jpg">
-                    <img src="images/art/shaded/lunedog-1000.jpg">
-                    <img src="images/art/shaded/melon-1000.jpg">
-                    <img src="images/art/shaded/pig-1000.jpg">
-                    <img src="images/art/shaded/ryu-1000.jpg">
-                    <img src="images/art/shaded/zac-1000.png">
+                    <img src="images/art/shaded/chunky-1000.png"
+                         onclick="viewSelectedImage('../images/art/shaded/chunky.png')">
+                    
+                    <img src="images/art/shaded/fatmelon-1000.png"
+                         onclick="viewSelectedImage('../images/art/shaded/fatmelon.png')">
+                    
+                    <img src="images/art/shaded/fortnite-1000.jpg"
+                         onclick="viewSelectedImage('../images/art/shaded/fortnite.jpg')">
+                    
+                    <img src="images/art/shaded/lunedog-1000.jpg"
+                         onclick="viewSelectedImage('../images/art/shaded/lunedog.jpg')">
+                    
+                    <img src="images/art/shaded/melon-1000.jpg"
+                         onclick="viewSelectedImage('../images/art/shaded/melon.jpg')">
+                    
+                    <img src="images/art/shaded/pig-1000.jpg"
+                         onclick="viewSelectedImage('../images/art/shaded/pig.jpg')">
+                    
+                    <img src="images/art/shaded/ryu-1000.jpg"
+                         onclick="viewSelectedImage('../images/art/shaded/ryu.jpg')">
+                    
+                    <img src="images/art/shaded/zac-1000.png"
+                         onclick="viewSelectedImage('../images/art/shaded/zac.png')">
+                    
                 </div>
             </div>
             <br>
             <div class="colour blued" id="nShaded">
                 <h3>NSFW Shaded</h3>
                 <div class="gallery nsfw">
-                    <img src="images/art/shaded/nsfw/bird-1000.jpg">
-                    <img src="images/art/shaded/nsfw/tanuki-1000.jpg">
-                    <img src="images/art/shaded/nsfw/vore-1000.jpg">
+                    <img src="images/art/shaded/nsfw/bird-1000.jpg"
+                         onclick="viewSelectedImage('../images/art/shaded/nsfw/bird.jpg')">
+                    
+                    <img src="images/art/shaded/nsfw/tanuki-1000.jpg"
+                         onclick="viewSelectedImage('../images/art/shaded/nsfw/tanuki.jpg')">
+                    
+                    <img src="images/art/shaded/nsfw/vore-1000.jpg"
+                         onclick="viewSelectedImage('../images/art/shaded/nsfw/vore.jpg')">
+                    
                 </div>
             </div>
         </section>
@@ -142,10 +230,18 @@
             <div class="colour darkd">
                 <h3>Reference Sheets</h3>
                 <div class="gallery">
-                    <img src="images/art/ref/bullmelon-1000.jpg">
-                    <img src="images/art/ref/raccoonekto-1000.jpg">
-                    <img src="images/art/ref/hyenamelon-1000.jpg">
-                    <img src="images/art/ref/koopamelon-1000.jpg">
+                    <img src="images/art/ref/bullmelon-1000.jpg"
+                         onclick="viewSelectedImage('../images/art/ref/bullmelon.jpg')">
+                    
+                    <img src="images/art/ref/raccoonekto-1000.jpg"
+                         onclick="viewSelectedImage('../images/art/ref/raccoonekto.jpg')">
+                    
+                    <img src="images/art/ref/hyenamelon-1000.jpg"
+                         onclick="viewSelectedImage('../images/art/ref/hyenamelon.jpg')">
+                    
+                    <img src="images/art/ref/koopamelon-1000.jpg"
+                         onclick="viewSelectedImage('../images/art/ref/koopamelon.jpg')">
+                    
                 </div>
             </div>
             <br>
@@ -156,7 +252,18 @@
             <div class="colour darkd">
                 <h3>Stickers</h3>
                 <div class="gallery">
-                    <img src="images/icon/site-icon.png">
+                    <img src="images/art/sticker/blush.png"
+                         onclick="viewSelectedImage('../images/art/sticker/blush.png')">
+                    
+                    <img src="images/art/sticker/concern.png"
+                         onclick="viewSelectedImage('../images/art/sticker/concern.png')">
+                    
+                    <img src="images/art/sticker/cute.png"
+                         onclick="viewSelectedImage('../images/art/sticker/cute.png')">
+                    
+                    <img src="images/art/sticker/sleepy.png"
+                         onclick="viewSelectedImage('../images/art/sticker/sleepy.png')">
+                    
                 </div>
             </div>
             <br>
