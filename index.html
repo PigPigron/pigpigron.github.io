@@ -6,37 +6,62 @@
         <link rel="icon" type="image/x-icon" href="images/icon/site-icon.png">
         <link rel="stylesheet" href="styles/main.css"/>
         <link rel="stylesheet" href="styles/buttons.css"/>
-        <link rel="stylesheet" href="styles/home.css"/>
         <link rel="stylesheet" href="styles/bars.css"/>
+        <link rel="stylesheet" href="styles/home.css"/>
         <script src="scripts/script.js"></script>
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
     </head>
     
     <body>
-        <img class="backart" src="images/art/home/back.png">
         
-        <header>
-            <div class="links">
-                <div class="link bluesky" onclick="window.open('https://bsky.app/profile/boar.ink')"></div>
-                <div class="link twitter" onclick="window.open('https://twitter.com/pigpigron')"></div>
-                <div class="link fa" onclick="window.open('https://www.furaffinity.net/user/pigpigron')"></div>
-                <div class="link kofi" onclick="window.open('https://ko-fi.com/pigpigron')"></div>
+        <!-- NAV BAR ---------------------------------------------->
+        <header class="bar top">
+            
+            <div class="left home box33">
+                <img src="images/icon/site-icon.png" onclick="window.open('./', '_self')">
+                <div class="name orange" onclick="window.open('./', '_self')">Pig</div>
+                <div class="name tan" onclick="window.open('./', '_self')">Pigron</div>
             </div>
+            <nav class="right buttons box50">
+                <a href="./samples"><img src="images/icon/art-icon.png">Samples</a>
+                <a href="./prices"><img src="images/icon/dollar-icon.png">Prices</a>
+                <a href="./tos"><img src="images/icon/info-icon.png">Info</a>
+            </nav>
+            <nav class="right buttons box17">
+                <a class="form" href="https://docs.google.com/forms/d/e/1FAIpQLSeVN0ZHdZgOieaIlX6585wDkPIgKjRe_kux8BYAVNhktHuIpw/viewform"><img src="images/icon/envelope-icon.png">Apply Now</a>
+            </nav>
+            
         </header>
-        <section class="row2">
-            <div>
-                <nav>
-                    <a href="samples.html"><img src="images/icon/art-icon.png">Samples</a>
-                    <a href="prices.html"><img src="images/icon/dollar-icon.png">Prices</a>
-                    <a href="tos.html"><img src="images/icon/info-icon.png">Info</a>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeVN0ZHdZgOieaIlX6585wDkPIgKjRe_kux8BYAVNhktHuIpw/viewform"><img src="images/icon/envelope-icon.png">Apply Now</a>
-                </nav>
-            </div>
-        </section>
         
-        <footer>
-            © PigPigron Art<br>
-            WEBSITE VERSION ( November 10, 2024) | WORK IN PROGRESS!
+        <div class="row2 backart">
+            <br>
+            <div>
+                <h1>Welcome!</h1>
+                <h3>All the information needed to commission me is found on this website. 
+                    <br>This site is a work in progress, but is fully functional at the moment!</h3>
+            </div>
+        </div>
+        
+        
+        <!-- BOTTOM BAR ---------------------------------------------->
+        <footer class="bar bot">
+            
+            <div class="left box50">
+                <div class="links">
+                    <div class="link bluesky" onclick="window.open('https://bsky.app/profile/boar.ink')"></div>
+                    <div class="link twitter" onclick="window.open('https://twitter.com/pigpigron')"></div>
+                    <div class="link fa" onclick="window.open('https://www.furaffinity.net/user/pigpigron')"></div>
+                    <div class="link kofi" onclick="window.open('https://ko-fi.com/pigpigron')"></div>
+                </div>
+                <h3>© PigPigron Art | Website made by me!</h3>
+            </div>
+            <div class="right home box50">
+                <div class="name orange" onclick="window.open('./', '_self')">Pig</div>
+                <div class="name tan" onclick="window.open('./', '_self')">Pigron</div>
+                <img src="images/icon/site-icon.png" onclick="window.open('./', '_self')">
+            </div>
+            
         </footer>
+        
     </body>
 </html>
