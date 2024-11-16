@@ -1,6 +1,7 @@
 .backart {
     background: url(/images/art/home/back.png) no-repeat;
-    height: 75vh;
+    background-color: #242124;
+    min-height: 75vh;
     background-position: center right 20%;
     text-shadow: 0 0 10px #242124,
         0 0 10px #242124,
@@ -10,6 +11,8 @@
 @media screen and (max-width: 700px) {
     .backart {
         display: flex;
-        height: 40vh;
+        min-height: 50vh;
+        background-size: 300vw;
+        background-position: center right 18%;
     }
 }
