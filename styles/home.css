@@ -1,8 +1,9 @@
 .backart {
-    background: url(/images/art/home/back.png) no-repeat;
+    background: url(/images/anim/campfire.gif) no-repeat, url(/images/art/home/back.png) no-repeat;
+    background-position: 51vw 34vh , center right 20%;
+    background-size: 35vw, 140vw;
     background-color: #242124;
     min-height: 75vh;
-    background-position: center right 20%;
     text-shadow: 0 0 10px #242124,
         0 0 10px #242124,
         0 0 10px #242124;
@@ -12,7 +13,7 @@
     .backart {
         display: flex;
         min-height: 50vh;
-        background-size: 300vw;
-        background-position: center right 18%;
+        background-size: 70vw ,300vw;
+        background-position: 14vw 24vh , center right 18%;
     }
 }
