@@ -105,6 +105,15 @@
     background: url(/images/icon/discord-icon-hover.png) no-repeat center;
     background-size: contain;
 }
+.pat {
+    background: url(/images/icon/patreon-icon.png) no-repeat center;
+    background-size: contain;
+    
+}
+.pat:hover {
+    background: url(/images/icon/patreon-icon-hover.png) no-repeat center;
+    background-size: contain;
+}
 
 @media screen and (max-width: 700px) {
     .bar {
