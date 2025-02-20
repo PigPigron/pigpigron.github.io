@@ -144,7 +144,7 @@ a.button.dark:hover {
     scale: 1.05;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1300px) {
     .row2, .row3 {
         display: block;
     }
