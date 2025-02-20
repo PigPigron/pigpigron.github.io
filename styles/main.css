@@ -105,19 +105,6 @@ img.titleicon {
     background-color: white;
 }
 
-@media screen and (max-width: 700px) {
-    .row2, .row3 {
-        display: block;
-    }
-    .row2 div, .row3 div {
-        width: 98%;
-    }
-    .rightleft {
-        display: flex;
-        flex-direction: column-reverse;
-    }
-}
-
 /* ==========================
  * BUTTONS
  * ==========================
@@ -157,8 +144,17 @@ a.button.dark:hover {
     scale: 1.05;
 }
 
-
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 900px) {
+    .row2, .row3 {
+        display: block;
+    }
+    .row2 div, .row3 div {
+        width: 98%;
+    }
+    .rightleft {
+        display: flex;
+        flex-direction: column-reverse;
+    }
     a.button {
         width: 90%;
         margin: 5px;

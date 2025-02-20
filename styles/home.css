@@ -9,7 +9,7 @@
         0 0 10px #242124;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 900px) {
     .backart {
         display: flex;
         min-height: 50vh;
