@@ -1,5 +1,6 @@
 html {
     font-family: Roboto, Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
 }
 body {
     background: #202c41;
@@ -122,7 +123,7 @@ img.titleicon {
  * ==========================
  */
 
-a, button{
+a.button, button{
     background: #C1C0EB;
     border-radius: 30px;
     text-decoration: none;
@@ -136,33 +137,29 @@ a, button{
     user-select: none;
     align-content: center;
 }
-a img, button img{
+a.button img, button img{
     max-width: 16px;
     float: left;
     user-select: none;
 }
-a:hover, button:hover {
+a.button:hover, button:hover {
     background: #FFF;
 }
 
-a.dark {
+a.button.dark {
     background: #242124;
     color: white;
     
 }
-a.dark:hover {
+a.button.dark:hover {
     background: #C3703A;
     color: black;
     scale: 1.05;
 }
 
-a.form {
-    width: 80%;
-    text-align: center;
-}
 
 @media screen and (max-width: 700px) {
-    a, a.form {
+    a.button {
         width: 90%;
         margin: 5px;
         text-align: center;
