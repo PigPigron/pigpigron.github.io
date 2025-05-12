@@ -6,6 +6,7 @@
     margin: 32px;
     border-radius: 32px;
     font-weight: bolder;
+    flex-wrap: wrap;
 }
 
 .navbar * {
