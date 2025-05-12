@@ -39,14 +39,13 @@ a:hover {
 }
 
 .navbar a img {
-    width: 16px;
-    height: 16px;
-    vertical-align: text-top;
+    width: 24px;
+    height: 24px;
 }
 
 /* Indicator for whether commissions are OPEN or CLOSED */
 .indicator {
-    background-color: orange;
+    background-color: #202c41;
     width: 32px;
     height: 16px;
     border-radius: 32px;
@@ -68,72 +67,77 @@ a:hover {
     visibility: visible;
 }
 
-.indicator.open {
-    background-color: greenyellow;
+.indicator .open {
+    background-color: rgb(34, 206, 0);
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    border-radius: 64px;
+    position: relative;
+    right: -16px;
 }
 
-.indicator.closed {
+.indicator .closed {
     background-color: red;
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    border-radius: 64px;
+    position: relative;
 }
 
 /* SOCIAL LINKS AND STUFF */
 .link {
-    width: 32px;
-    height: 32px;
+    width: 48px;
+    height: 48px;
     display: inline-block;
     transition: 0.3s;
 }
 .bluesky {
-    background: url(/images/icon/bluesky-icon.png) no-repeat center;
+    background: url(/res/img/ico/bluesky256.png) no-repeat center;
     background-size: contain;
     
 }
 .bluesky:hover {
-    background: url(/images/icon/bluesky-icon-hover.png) no-repeat center;
-    background-size: contain;
+    filter: invert(100%)
 }
 .twitter {
-    background: url(/images/icon/twitter-icon.png) no-repeat center;
+    background: url(/res/img/ico/twitter256.png) no-repeat center;
     background-size: contain;
     
 }
 .twitter:hover {
-    background: url(/images/icon/twitter-icon-hover.png) no-repeat center;
-    background-size: contain;
+    filter: invert(100%)
 }
 .fa {
-    background: url(/images/icon/fa-icon.png) no-repeat center;
+    background: url(/res/img/ico/fa256.png) no-repeat center;
     background-size: contain;
     
 }
 .fa:hover {
-    background: url(/images/icon/fa-icon-hover.png) no-repeat center;
-    background-size: contain;
+    filter: invert(100%)
 }
 .kofi {
-    background: url(/images/icon/kofi-icon.png) no-repeat center;
+    background: url(/res/img/ico/kofi256.png) no-repeat center;
     background-size: contain;
     
 }
 .kofi:hover {
-    background: url(/images/icon/kofi-icon-hover.png) no-repeat center;
-    background-size: contain;
+    filter: invert(100%)
 }
 .discord {
-    background: url(/images/icon/discord-icon.png) no-repeat center;
+    background: url(/res/img/ico/discord256.png) no-repeat center;
     background-size: contain;
     
 }
 .discord:hover {
-    background: url(/images/icon/discord-icon-hover.png) no-repeat center;
-    background-size: contain;
+    filter: invert(100%)
 }
 .pat {
-    background: url(/images/icon/patreon-icon.png) no-repeat center;
+    background: url(/res/img/ico/patreon256.png) no-repeat center;
     background-size: contain;
     
 }
 .pat:hover {
-    background: url(/images/icon/patreon-icon-hover.png) no-repeat center;
-    background-size: contain;
+    filter: invert(100%)
 }

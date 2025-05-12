@@ -1,0 +1,74 @@
+html {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+    font-size: large;
+}
+body {
+    background-color: #242124;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Main Box Containers ------------------------------------------- */
+.box {
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    border-radius: 16px;
+    width: 80%;
+}
+.box > * {
+    margin: 24px;
+}
+.box.blue {
+    background-color: #202c41;
+}
+.box.light {
+    background-color: #C1C0EB;
+    color: black;
+}
+
+/* BOX FOR BOXES ------------------------------------------------- */
+.boxbox {
+    width: 80%;
+}
+.boxbox .box {
+    width: 100%;
+}
+.boxbox .box:first-child {
+    border-radius: 16px 16px 0px 0px;
+    margin-bottom: 0;
+}
+.boxbox .box:not(:first-child):not(:last-child) {
+    border-radius: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.boxbox .box:last-child {
+    border-radius: 0px 0px 16px 16px;
+    margin-top: 0;
+}
+
+
+img.title {
+    width: 96px;
+    height: 96px;
+}
+img.light {
+    filter: invert(80%) sepia(14%) saturate(927%) hue-rotate(202deg) brightness(99%) contrast(85%);
+}
+
+
+@media screen and (max-width: 1300px) {
+    .box {
+        flex-direction: column;
+    }
+}

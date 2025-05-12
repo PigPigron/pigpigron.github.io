@@ -1,0 +1,19 @@
+html, body {
+    height: 100%;
+    background: url(/res/img/art/home/back.png) no-repeat;
+    background-position: right -8vw bottom 30%;
+    background-color: #242124;
+    min-height: 75vh;
+}
+
+@media screen and (max-width: 1000px) {
+    html, body {
+        background-position: right 10% bottom 30%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    html, body {
+        background-position: right 20% bottom 30%;
+    }
+}
