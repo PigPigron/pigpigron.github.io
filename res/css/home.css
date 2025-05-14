@@ -3,6 +3,7 @@ html, body {
     background: url(/res/img/art/home/back.png) no-repeat;
     background-position: right -8vw bottom 30%;
     background-color: #242124;
+    background-attachment: fixed;
     min-height: 75vh;
 }
 
