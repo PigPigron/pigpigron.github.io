@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>PigPigron Art | Home</title>
+        <link rel="icon" type="image/x-icon" href="/res/img/ico/site512.png">
+        <link rel="stylesheet" href="res/css/main.css"/>
+        <link rel="stylesheet" href="res/css/prices.css"/>
+        <script src="scripts/script.js"></script>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta name="description" content="PigPigron Art, Home for artwork commission information and Pig's furry art gallery.">
+        
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous">;
+            
+        </script>
+        <script> 
+            $(function(){
+              $("#header").load("embed/header.html"); 
+              $("#footer").load("embed/footer.html"); 
+            });
+        </script> 
+    </head>
+    
+    <body>
+        <!-- NAV BAR ----------------------------------------------->
+        <div id="header"></div>
+
+        <!-- MAIN BLOCK -------------------------------------------->
+        <div class="boxbox">
+            <div class="box blue">
+                <span>
+                    <img src="/res/img/ico/price256.png" class="light title">
+                    <h1><b>Commission Prices</b></h1>
+                    All prices are in Canadian Dollars!
+                    <br>
+Current Price       Version: October 27, 2024
+                </span>
+            </div>
+            <div class="box light reverse">
+                <img src="/res/img/art/sketch/moose-1000.png">
+                <img src="/res/img/art/sketch/khat-1000.jpg">
+                <div class="box blue">
+                    <span><b>
+                        <h2><u>Sketches</u><br>
+                            $30 CAD
+                        </h2>
+                        +$15 per additional character
+                        <br>
+                        +$15 for background
+                        <br><br>
+                        Quicker sketches, only comes in black and white
+                    </b></span>
+                </div>
+            </div>
+            <div class="box blue">
+                <div class="box light">
+                    <span><b>
+                        <h2><u>Coloured</u><br>
+                            $50 CAD
+                        </h2>
+                        +$25 per additional character
+                        <br>
+                        +$25 for background
+                        <br><br>
+                        Lined artwork with colour. Can be black and white if chosen
+                    </b></span>
+                </div>
+                <img src="/res/img/art/colour/melonsmile-1000.png">
+                <img src="/res/img/art/colour/bee-1000.png">
+            </div>
+            <div class="box light reverse">
+                <img src="/res/img/art/shaded/chunky-1000.png">
+                <img src="/res/img/art/shaded/ryu-1000.jpg">
+                <div class="box blue">
+                    <span><b>
+                        <h2><u>Shaded</u><br>
+                            $70 CAD
+                        </h2>
+                        +$35 per additional character
+                        <br>
+                        +$35 for background
+                        <br><br>
+                        Shaded artwork that can be either coloured, or black and white if chosen
+                    </b></span>
+                </div>
+            </div>
+        </div>
+        <button onclick="window.scroll({top: 0, left: 0, behavior: 'smooth', });">↑ Back to Top ↑</button>
+        <!-- BOTTOM BAR -------------------------------------------->
+        <div id="footer"></div>
+    </body>
+</html>
