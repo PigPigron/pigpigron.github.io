@@ -1,0 +1,24 @@
+.box img {
+    width: 33%;
+    height: 100%;
+}
+
+@media only screen and (max-width: 1024px) {
+    .box img {
+        width: 80%;
+        height: 100%;
+    }
+    .box {
+        flex-direction: column;
+    }
+    .box.reverse{
+        flex-direction: column-reverse;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .box img {
+        width: 80%;
+        height: 100%;
+    }
+}

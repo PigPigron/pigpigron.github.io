@@ -6,13 +6,20 @@ html, body {
     min-height: 75vh;
 }
 
-@media screen and (max-width: 1000px) {
+img.site {
+    height: 100%;
+    width: 200px;
+}
+
+/* Medium Devices, such as tablets */
+@media only screen and (max-width: 1024px) {
     html, body {
         background-position: right 10% bottom 30%;
     }
 }
 
-@media screen and (max-width: 800px) {
+/* Small Devices, such as phones */
+@media only screen and (max-width: 768px) {
     html, body {
         background-position: right 20% bottom 30%;
     }

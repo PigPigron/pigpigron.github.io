@@ -16,43 +16,56 @@ body {
     flex-direction: column;
 }
 
+#header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
 /* Main Box Containers ------------------------------------------- */
 .box {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-top: 8px;
     margin-bottom: 8px;
     border-radius: 16px;
-    width: 80%;
 }
 .box > * {
     margin: 24px;
 }
 .box.blue {
     background-color: #202c41;
+    color: white;
 }
 .box.light {
     background-color: #C1C0EB;
     color: black;
 }
 
+.flexthis {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* BOX FOR BOXES ------------------------------------------------- */
 .boxbox {
     width: 80%;
 }
-.boxbox .box {
+.boxbox > .box {
     width: 100%;
 }
-.boxbox .box:first-child {
+.boxbox > .box:first-child {
     border-radius: 16px 16px 0px 0px;
     margin-bottom: 0;
 }
-.boxbox .box:not(:first-child):not(:last-child) {
+.boxbox > .box:not(:first-child):not(:last-child) {
     border-radius: 0;
     margin-top: 0;
     margin-bottom: 0;
 }
-.boxbox .box:last-child {
+.boxbox > .box:last-child {
     border-radius: 0px 0px 16px 16px;
     margin-top: 0;
 }
@@ -66,9 +79,32 @@ img.light {
     filter: invert(80%) sepia(14%) saturate(927%) hue-rotate(202deg) brightness(99%) contrast(85%);
 }
 
+/* Link Buttons -------------------------------------------------- */
+button {
+    background-color: #C1C0EB;
+    margin: 8px;
+    padding: 16px 128px 16px 128px;
+    color: black;
+    border-radius: 32px;
+    border: none;
+    font-size: 16px;
+    font-weight: bolder;
+    text-decoration: none;
+    display: flex;
+    transition: 0.3s;
+}
+button:hover {
+    background-color: white;
+}
 
-@media screen and (max-width: 1300px) {
+@media only screen and (max-width: 768px) {
     .box {
         flex-direction: column;
+    }
+    #header {
+        position: relative;
+    }
+    .box.reverse {
+        flex-direction: column-reverse;
     }
 }

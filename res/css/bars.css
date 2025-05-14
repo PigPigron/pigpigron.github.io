@@ -1,25 +1,27 @@
-.navbar {
-    background-color: #202c41;
+header, footer {
     padding: 16px;
     display: flex;
     justify-content: center;
-    margin: 32px;
     border-radius: 32px;
-    font-weight: bolder;
     flex-wrap: wrap;
+    margin: 32px;
+    border: #242124 solid 4px;
+}
+header {
+    background-color: #202c41;
+    font-weight: bolder;
+}
+footer {
+    background-color: #C1C0EB;
 }
 
-.navbar * {
+header *, footer * {
     margin: 8px;
     align-items: center;
     justify-content: center;
 }
 
-.navbar.light {
-    background-color: #C1C0EB;
-}
-
-a {
+header a {
     background-color: #C1C0EB;
     padding: 8px;
     color: black;
@@ -30,16 +32,14 @@ a {
     transition: 0.3s;
 
 }
-
-a:hover {
+header a:hover {
     background-color: white;
 }
 
-.navbar a * {
+header a * {
     margin: 4px;
 }
-
-.navbar a img {
+header a img {
     width: 24px;
     height: 24px;
 }
@@ -52,23 +52,28 @@ a:hover {
     border-radius: 32px;
 }
 
-.indicator .tooltip {
-    visibility: hidden;
-    z-index: 1;
+.tooltip {
+    display: none;
+    z-index: 2;
     position: relative;
     background-color: black;
     color: white;
-    top: calc(200% + 16px);
-    left: calc(-50% - 16px);
+    top: calc(200% + 6px);
+    left: -250%;
     padding: 16px;
     border-radius: 16px;
 }
-
-.indicator:hover .tooltip {
-    visibility: visible;
+.tooltip.closed {
+    left: -190%;
+}
+.indicator:hover .closed .tooltip.closed {
+    display: inline;
+}
+.indicator:hover .open .tooltip.open {
+    display: inline;
 }
 
-.indicator .open {
+.indicator > .open {
     background-color: rgb(34, 206, 0);
     width: 16px;
     height: 16px;
@@ -77,8 +82,7 @@ a:hover {
     position: relative;
     right: -16px;
 }
-
-.indicator .closed {
+.indicator > .closed {
     background-color: red;
     width: 16px;
     height: 16px;
